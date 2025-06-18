@@ -30,6 +30,16 @@ const PasswordGenerator = () => {
     }
     setPassword(generatedPassword);
   }
+
+  function handleToast() {
+    const toast = document.createElement("div");
+    toast.className = "toast";
+    toast.textContent = "Password copied to clipboard";
+    document.querySelector(".toast-container").appendChild(toast);
+    setTimeout(() => {
+      toast.remove();
+    }, 3000);
+  }
   return (
     <div>
       <h1>Password Generator</h1>
@@ -81,7 +91,16 @@ const PasswordGenerator = () => {
         </div>
         <div>
           <button onClick={() => generate(length)}>Generate</button>
+          <button
+            onClick={() => {
+              navigator.clipboard.writeText(password);
+              handleToast();
+            }}
+          >
+            Copy
+          </button>
         </div>
+        <div className="toast-container"></div>
       </div>
     </div>
   );
