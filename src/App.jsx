@@ -7,6 +7,9 @@ function App() {
       <button>
         <NavLink to="/stopwatch">Stopwatch</NavLink>
       </button>
+      <button>
+        <NavLink to="/password-generator">Password Generator</NavLink>
+      </button>
     </div>
   );
 }

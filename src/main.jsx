@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Stopwatch from "./components/Stopwatch/Stopwatch.jsx";
+import PasswordGenerator from "./components/PasswordGenerator/PasswordGenerator.jsx";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/stopwatch",
     element: <Stopwatch />,
+  },
+  {
+    path: "/password-generator",
+    element: <PasswordGenerator />,
   },
 ]);
 
