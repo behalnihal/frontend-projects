@@ -5,7 +5,7 @@ import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Stopwatch from "./components/Stopwatch/Stopwatch.jsx";
 import PasswordGenerator from "./components/PasswordGenerator/PasswordGenerator.jsx";
-
+import Throttle from "./components/Throttle/Throttle.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/password-generator",
     element: <PasswordGenerator />,
+  },
+  {
+    path: "/throttle",
+    element: <Throttle />,
   },
 ]);
 
