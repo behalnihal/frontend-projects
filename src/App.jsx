@@ -13,6 +13,9 @@ function App() {
       <button>
         <NavLink to="/throttle">Throttle</NavLink>
       </button>
+      <button>
+        <NavLink to="/progress-bar">Progress Bar</NavLink>
+      </button>
     </div>
   );
 }

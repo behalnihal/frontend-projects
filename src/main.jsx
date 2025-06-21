@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Stopwatch from "./components/Stopwatch/Stopwatch.jsx";
 import PasswordGenerator from "./components/PasswordGenerator/PasswordGenerator.jsx";
 import Throttle from "./components/Throttle/Throttle.jsx";
+import ProgressBar from "./components/ProgressBar/ProgressBar.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/throttle",
     element: <Throttle />,
+  },
+  {
+    path: "/progress-bar",
+    element: <ProgressBar />,
   },
 ]);
 
