@@ -41,18 +41,18 @@ const PasswordGenerator = () => {
     }, 3000);
   }
   return (
-    <div>
-      <h1>Password Generator</h1>
+    <div className="bg-gray-100 h-screen flex flex-col items-center justify-center space-y-4">
+      <h1 className="text-2xl font-bold">Password Generator</h1>
       <div>
         <div>
           <textarea
             type="password"
             readOnly
             value={password}
-            style={{ width: "100%", height: "100px" }}
+            className="border border-gray-300 p-2 rounded w-100 h-100"
           ></textarea>
         </div>
-        <div>
+        <div className="flex items-center space-x-2">
           <input
             type="range"
             min={6}
@@ -62,7 +62,7 @@ const PasswordGenerator = () => {
           ></input>
           <label htmlFor="length">Length: {length}</label>
         </div>
-        <div>
+        <div className="flex items-center space-x-2">
           <input
             type="checkbox"
             id="isNumAllowed"
@@ -71,7 +71,7 @@ const PasswordGenerator = () => {
           ></input>
           <label htmlFor="isNumAllowed">Numbers</label>
         </div>
-        <div>
+        <div className="flex items-center space-x-2">
           <input
             type="checkbox"
             id="isSpecialAllowed"
@@ -80,7 +80,7 @@ const PasswordGenerator = () => {
           ></input>
           <label htmlFor="isSpecialAllowed">Special</label>
         </div>
-        <div>
+        <div className="flex items-center space-x-2">
           <input
             type="checkbox"
             id="isUpperAllowed"
@@ -89,9 +89,15 @@ const PasswordGenerator = () => {
           ></input>
           <label htmlFor="isUpperAllowed">Uppercase</label>
         </div>
-        <div>
-          <button onClick={() => generate(length)}>Generate</button>
+        <div className="flex items-center space-x-2">
           <button
+            className="bg-blue-500 text-white p-2 rounded"
+            onClick={() => generate(length)}
+          >
+            Generate
+          </button>
+          <button
+            className="bg-gray-300 p-2 rounded"
             onClick={() => {
               navigator.clipboard.writeText(password);
               handleToast();

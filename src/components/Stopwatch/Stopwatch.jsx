@@ -26,14 +26,24 @@ function Stopwatch() {
     }
   }, [isRunning]);
   return (
-    <>
-      <div>
-        <h1>Stop Watch</h1>
-      </div>
-      <div>
-        <button onClick={() => setIsRunning(true)}>Start</button>
-        <button onClick={() => setIsRunning(false)}>Stop</button>
+    <div className="bg-gray-100 h-screen flex flex-col items-center justify-center space-y-4">
+      <h1 className="text-2xl font-bold">Stop Watch</h1>
+
+      <div className="flex space-x-2">
         <button
+          className="bg-blue-500 text-white p-2 rounded"
+          onClick={() => setIsRunning(true)}
+        >
+          Start
+        </button>
+        <button
+          className="bg-red-500 text-white p-2 rounded"
+          onClick={() => setIsRunning(false)}
+        >
+          Stop
+        </button>
+        <button
+          className="bg-gray-300 p-2 rounded"
           onClick={() => {
             setIsRunning(false);
             setElapsedTime(0);
@@ -42,17 +52,22 @@ function Stopwatch() {
         >
           Reset
         </button>
-        <button onClick={() => setLaps([...laps, elapsedTime])}>Lap</button>
+        <button
+          className="bg-gray-300 p-2 rounded"
+          onClick={() => setLaps([...laps, elapsedTime])}
+        >
+          Lap
+        </button>
       </div>
-      <div>
+      <div className="text-2xl font-bold">
         <span>{formatTime(elapsedTime)}</span>
       </div>
-      <div>
+      <div className="text-lg">
         {laps.map((lap, index) => {
           return <ol key={index}>{formatTime(lap)}</ol>;
         })}
       </div>
-    </>
+    </div>
   );
 }
 

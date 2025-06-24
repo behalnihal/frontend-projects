@@ -21,9 +21,9 @@ export default function ProgressBar() {
     return () => clearInterval(interval);
   }, [isLoading]);
   return (
-    <div>
-      <h1>Progress Bar</h1>
-      <div>
+    <div className="bg-gray-100 h-screen flex flex-col items-center justify-center space-y-4">
+      <h1 className="text-2xl font-bold">Progress Bar</h1>
+      <div className="w-full" style={{ maxWidth: "600px", padding: "20px" }}>
         <div
           style={{
             width: "100%",
@@ -42,6 +42,7 @@ export default function ProgressBar() {
           ></div>
         </div>
         <button
+          className="bg-blue-500 text-white p-2 rounded"
           onClick={() => {
             setIsLoading(true);
           }}
@@ -49,6 +50,7 @@ export default function ProgressBar() {
           Start
         </button>
         <button
+          className="bg-gray-300 p-2 rounded"
           onClick={() => {
             setIsLoading(false);
             setProgress(0);

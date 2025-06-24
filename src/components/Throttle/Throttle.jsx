@@ -11,7 +11,7 @@ const Throttle = () => {
     });
   }, []);
   return (
-    <div>
+    <div className="bg-gray-100 h-screen flex flex-col items-center justify-center space-y-4">
       <span>
         {height} x {width}
       </span>
