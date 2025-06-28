@@ -3,7 +3,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="bg-gray-100 h-screen flex flex-col items-center justify-center space-y-4">
+    <div className="bg-gray-100 h-screen flex flex-row items-center justify-center space-x-4">
       <button className="bg-white p-4 rounded shadow">
         <NavLink to="/stopwatch">Stopwatch</NavLink>
       </button>
